@@ -1,0 +1,35 @@
+<!-- One way to bind data is with string interpolation. -->
+<!-- <h1>{{ firstName }} {{ lastName }}</h1> -->
+
+
+<!-- Property Binding -->
+<!-- <h1 [innerText]="title"></h1> -->
+<!-- <button [disabled]="isDisabled">You cant click me</button> -->
+
+
+<!-- Two way Data Binding -->
+<!-- <h1>{{ Name }}</h1>
+<input type="text" [(ngModel)]="Name"> -->
+
+
+<!-- String Interpolation -->
+<!-- Event Binding -->
+ <!-- <input type="number" placeholder="num1" [(ngModel)]="num1">
+ <input type="number" placeholder="num2" [(ngModel)]="num2">
+ <button (click)="getMax(num1, num2)">find</button>
+ <h2 style.color="{{color}}"> Largest Number : {{ result }}</h2> -->
+
+ <!-- Event Binding with $event Object -->
+ <!-- <input type="text" (input)="textDisplay($event); textInput1=textInput" placeholder="Type Something"> -->
+ <!-- <h1>With Event {{ textInput }}</h1> -->
+
+ <!-- Event Binding without $event Object -->
+ <!-- <input type="text" (input)="textInput1=$any($event.target).value" placeholder="Type Something">
+ <h1>Without Event {{ textInput1 }}</h1> -->
+
+ <h1>{{ aniTitle }}</h1>
+ <p *ngFor="let anime of animeList">
+     {{ anime }}
+ </p>
+
+ 
