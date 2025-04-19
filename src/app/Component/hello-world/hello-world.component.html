@@ -27,9 +27,95 @@
  <!-- <input type="text" (input)="textInput1=$any($event.target).value" placeholder="Type Something">
  <h1>Without Event {{ textInput1 }}</h1> -->
 
- <h1>{{ aniTitle }}</h1>
- <p *ngFor="let anime of animeList">
-     {{ anime }}
- </p>
 
- 
+ <!-- A table with ngFor Directive and ngClass Directive -->
+ <!-- <h1>{{ aniTitle }}</h1>
+ <table class="table table-bordered table-striped table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Season Count</th>
+            <th>Episode Count</th>
+            <th>Main Antagonist</th>
+            <th>Protagonist</th>
+            <th>Main Characters</th>
+            <th>Release Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr [ngClass]="{'table-success': anime.status === 'Ongoing', 'table-danger': anime.status === 'Completed', 'table-warning': anime.status === 'Upcoming'}"
+        *ngFor="let anime of animeDetailsList; let f=first, let l=last">
+            <td>{{ anime.title }}</td>
+            <td>{{ anime.seasonCount }}</td>
+            <td>{{ anime.episodeCount }}</td>
+            <td>{{ anime.mainAntagonist }}</td>
+            <td>{{ anime.protagonist }}</td>
+            <td>{{ anime.mainCharacters }}</td>
+            <td>{{ anime.releaseDate }}</td>
+            <td>{{ anime.status }}</td>
+        </tr>
+ </table> -->
+
+
+<!-- ng Switch Directive with ngModel Directive -->
+<!-- <label for="">Type num</label>
+<input type="number" [(ngModel)]="num" [value]="1">
+<div [ngSwitch]="num">
+  <div *ngSwitchCase="1">One</div>
+  <div *ngSwitchCase="2">Two</div>
+  <div *ngSwitchCase="3">Three</div>
+  <div *ngSwitchCase="4">Four</div>
+  <div *ngSwitchDefault>Zero</div>
+</div> -->
+
+
+<!-- ngIf directive -->
+<!-- <label for="">checkbox</label>
+<input type="checkbox" [(ngModel)]="isChecked">
+<div *ngIf="isChecked">Checkbox is checked</div>
+<div *ngIf="!isChecked">Checkbox is Unchecked</div> -->
+
+<!-- ngIf directive with then and else block in ng-template -->
+<!-- <label for="">Checkbox</label>
+ <input type="checkbox" [(ngModel)]="isChecked">
+ <div *ngIf="isChecked; then thenBlock; else elseBlock">
+ </div>
+ <ng-template #thenBlock>
+    <div>Checkbox is checked</div>
+ </ng-template>
+ <ng-template #elseBlock>
+    <div>Checkbox is unchecked</div>
+ </ng-template>  -->
+
+ <!-- ngClass Directive -->
+ <!-- <div [ngClass]="{primary: isPrimary, italic: isItalic, bold: isBold}">
+    Hajime Mashite!!! 
+ </div>
+
+ <button (click)="changeColor()">Change</button>
+ <button (click)="changeItalic()">Change Italic</button>
+ <button (click)="changeBold()">Change Bold</button>
+ <button (click)="reset()">Reset</button> -->
+
+ <!-- ngStyle Directive -->
+  <!-- <div>
+    <label>Color : </label>
+    <input type="text" [(ngModel)]="color" placeholder="Enter color">
+    <p [ngStyle]="{color : color}">Douzo Yoroshiku!!!</p>
+  </div> -->
+
+  <!-- Pipes -->
+  <!-- Date Pipe and its arguments -->
+  <!-- <p>Unformatted Date : {{ toDate }}</p>
+  <p>Formatted Date : {{ toDate | date }}</p>
+  <p>Formatted Date with medium attribute : {{ toDate | date: 'medium' }}</p>
+  <p>Formatted Date with short attribute : {{ toDate | date: 'short' }}</p>
+  <p>Formatted Date with long attribute : {{ toDate | date: 'long' }}</p>
+  <p>Formatted Date with full attribute : {{ toDate | date: 'full' }}</p> -->
+
+  <!-- Character Pipes -->
+  <p>Without UpperCase Pipe : {{ message }}</p>
+  <p>With UpperCase Pipe : {{ message | uppercase }}</p>
+  <p>Without  Pipe : {{ message }}</p>
+  <p>With UpperCase Pipe : {{ message | lowercase }}</p>
