@@ -151,5 +151,8 @@ export class HelloWorldComponent {
   // toDate: string = new Date().getTime().toString();
   // toDate: Date = new Date();
 
-  message: string = "Using UpperCase and lowercase pipes";
+  // <!-- Used for UpperCase, LowerCase Pipes and Slice pipes-->
+  // message: string = "Using UpperCase and lowercase pipes";
+
+  price : number = 1000;
 }

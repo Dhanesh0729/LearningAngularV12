@@ -115,7 +115,18 @@
   <p>Formatted Date with full attribute : {{ toDate | date: 'full' }}</p> -->
 
   <!-- Character Pipes -->
-  <p>Without UpperCase Pipe : {{ message }}</p>
+  <!-- <p>Without UpperCase Pipe : {{ message }}</p>
   <p>With UpperCase Pipe : {{ message | uppercase }}</p>
-  <p>Without  Pipe : {{ message }}</p>
-  <p>With UpperCase Pipe : {{ message | lowercase }}</p>
+  <p>Without  LowerCasePipe : {{ message }}</p>
+  <p>With LowerCase Pipe : {{ message | lowercase }}</p> -->
+
+  <!-- Slice Pipes -->
+  <!-- <p>Without Slice Pipe : {{ message }}</p>
+  <p>With Slice Pipe : {{ message | slice: 0:4 }}</p>
+  <p>With Slice Pipe : {{ message | slice: 3 }}</p>
+  <p>With Slice Pipe : {{ message | slice: -3 }}</p> -->
+
+  <!-- Currency Pipe -->
+  <p>Without Currency Pipe : {{ price }}</p>
+  <p>With Currency Pipe : {{ price | currency }}</p>
+  <p>With Currency Pipe in Customized Format : {{ price | currency : 'INR' }}</p>
