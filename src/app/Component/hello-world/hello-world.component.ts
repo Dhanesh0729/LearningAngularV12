@@ -154,5 +154,6 @@ export class HelloWorldComponent {
   // <!-- Used for UpperCase, LowerCase Pipes and Slice pipes-->
   // message: string = "Using UpperCase and lowercase pipes";
 
-  price : number = 1000;
+  // <!-- Currency Pipe -->
+  // price : number = 1000;
 }
